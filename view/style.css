@@ -1,0 +1,660 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(217, 207, 207, 0.2) !important;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  width: 80%;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow gelap dan transparan */
+  position: fixed; /* Navbar selalu di atas */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Pastikan navbar berada di atas elemen lainnya */
+}
+
+
+
+/* Logo UTD di Navbar */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-left: 90px; /* Geser seluruh elemen .navbar-brand ke kanan */
+}
+
+.navbar-nav {
+  margin-right: 90px; /* Ensure the menu items have 90px spacing on the right */
+}
+
+.navbar-brand img {
+  height: 57px; /* Tetapkan tinggi logo */
+  width: 37px; /* Tetapkan lebar logo */
+  margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+/* Teks di bawah logo */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+/* Warna dan gaya teks UTD */
+.utd-text {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Warna dan gaya teks Unit Transfusi Darah */
+.unit-text {
+  color: #181616;
+  font-weight: normal;
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+/* Warna teks navbar */
+.navbar-nav .nav-link {
+  color: rgb(180, 10, 10);
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.1s;
+  font-size: 18px;
+}
+
+/* Gaya saat hover atau fokus pada navbar-link */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background-color: rgb(245, 241, 241);
+  color: red !important; /* Warna teks saat hover atau fokus */
+}
+
+/* Gaya saat link aktif */
+.navbar-nav .nav-link.active {
+  color: red !important; /* Warna teks tetap merah saat link aktif */
+  background-color: rgba(255, 255, 255, 0.2); /* Background warna merah tipis */
+}
+
+/* Border vertikal di navbar */
+.navbar-nav .nav-item:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item:last-child::before {
+  content: "";
+  width: 3px;
+  height: 24px;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.banner {
+  position: relative; /* Tambahkan posisi relative untuk overlay */
+  background: url('../images/donor_home.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  margin: 0; /* Menghapus semua margin */
+  padding: 0; /* Menghapus semua padding */
+  z-index: 1; /* Pastikan banner berada di bawah navbar */
+}
+
+.highlight-text {
+  color: red; /* Ganti dengan warna yang diinginkan */
+}
+
+.banner::before {
+  content: '';
+  position: absolute; /* Letakkan overlay di atas gambar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.5); /* Ganti dengan warna dan opasitas sesuai kebutuhan */
+  z-index: 2; /* Pastikan overlay berada di atas gambar tetapi di bawah konten banner */
+}
+
+.banner > * {
+  position: relative; /* Konten di dalam banner harus berada di atas overlay */
+  z-index: 2; /* Pastikan konten banner berada di atas overlay */
+}
+
+
+/* Konten di dalam banner */
+.banner h4, .banner h3 {
+  margin-left: 0;
+  text-align: left;
+}
+
+/* Tentang Kami */
+.tentang-kami img {
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Stok Darah */
+#stok_darah {
+  margin-top: 43px;
+  margin-bottom: 50px;
+}
+
+/* Judul Ter-update */
+#informasi {
+  color: red; /* Mengubah warna teks menjadi merah */
+  position: relative; /* Memungkinkan penempatan pseudo-elemen dengan posisi absolut */
+  padding-bottom: px; /* Menambahkan jarak antara teks dan garis bawah */
+  margin-bottom: 20px; /* Menambahkan jarak antara garis bawah dan elemen berikutnya */
+  font-size: 20px; /* Ukuran font */
+}
+
+
+/* Judul Tentang Kami */
+#tentang {
+  color: red; /* Mengubah warna teks menjadi merah */
+  position: relative; /* Memungkinkan penempatan pseudo-elemen dengan posisi absolut */
+  padding-bottom: 10px; /* Menambahkan jarak antara teks dan garis bawah */
+  margin-bottom: 20px; /* Menambahkan jarak antara garis bawah dan elemen berikutnya */
+  font-size: 20px;
+}
+
+#tentang::after {
+  content: ""; /* Tidak menampilkan teks apa pun */
+  position: absolute; /* Posisi absolut terhadap elemen induknya */
+  left: 0; /* Memulai garis dari kiri elemen */
+  bottom: 0; /* Memposisikan garis di bawah teks */
+  width: 18%; /* Mengatur panjang garis, sesuaikan sesuai kebutuhan */
+  height: 2px; /* Mengatur ketebalan garis */
+  background-color: red; /* Warna garis */
+}
+
+.custom-margin-top {
+  margin-top: 15%; /* Sesuaikan nilai sesuai kebutuhan */
+}
+
+/* Gaya untuk judul "Berita UTD - Seputar Donor Darah" */
+#berita {
+  color: red; /* Warna teks merah */
+  font-size: 20px; /* Ukuran font 20px */
+  position: relative; /* Posisi relatif untuk elemen pseudo */
+  padding-bottom: 5px; /* Jarak di bawah teks sebelum garis */
+  display: inline-block; /* Agar garis tetap di bawah teks */
+}
+
+/* Garis bawah merah untuk judul */
+#berita::after {
+  content: ''; /* Konten kosong untuk pseudo-element */
+  position: absolute; /* Posisi absolut relatif terhadap judul */
+  left: 0; /* Mulai dari kiri */
+  bottom: -2px; /* Posisi di bawah teks */
+  width: 100%; /* Lebar penuh elemen */
+  height: 2px; /* Tinggi garis */
+  background-color: red; /* Warna garis merah */
+}
+
+/* Gaya untuk gambar di bagian Berita */
+#berita .img-fluid {
+  border-radius: 10px; /* Menambahkan sudut melengkung 10px pada gambar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk memberikan efek kedalaman */
+}
+
+/* Tambahkan scroll-margin-top untuk setiap bagian yang menjadi target */
+#berita, #tentang, #stok_darah, #informasi {
+  scroll-margin-top: 90px; /* Sesuaikan nilai ini dengan tinggi navbar Anda */
+}
+
+/* Mengatur spacing dan ukuran font */
+#berita {
+  color: red;
+  font-size: 20px;
+  padding-bottom: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#berita::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+
+/* Mengatur tampilan gambar dalam kartu */
+.card-img-top {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengatur margin pada container */
+.container-fluid {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+/* Mengubah ukuran box (card) */
+.card {
+  width: 283px; /* Lebar card */
+  height: auto; /* Tinggi otomatis mengikuti konten */
+  margin-left: 17%;
+  
+}
+
+.card-img-top {
+  width: 250px; /* Lebar gambar mengikuti lebar card */
+  height: auto; /* Tinggi gambar otomatis mengikuti rasio asli */
+  border-top-left-radius: 15px; /* Sudut kiri atas melengkung */
+  border-top-right-radius: 0; /* Sudut kanan atas tanpa radius */
+  border-bottom-left-radius: 0; /* Sudut kiri bawah tanpa radius */
+  border-bottom-right-radius: 15px; /* Sudut kanan bawah melengkung */
+  display: block; /* Memastikan gambar diatur sebagai elemen block */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.card-title {
+  color: red; /* Mengatur warna teks h5 menjadi merah */
+  text-align: center; /* Mengatur teks h5 berada di tengah */
+  size: 15px;
+}
+
+.card-text {
+  color: black; /* Mengatur warna teks paragraf menjadi hitam */
+  text-align: center; /* Mengatur teks paragraf berada di tengah */
+  font-size: 14px;
+}
+
+
+
+
+
+/* informasi */
+/* informasi */
+#informasi {
+
+  background: linear-gradient(to bottom, #980c0c, #450202); /* Gradasi dari merah ke abu-abu, kembali ke merah */
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1;
+  height: 600px; /* Atur tinggi sesuai kebutuhan */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box; /* Pastikan padding tidak mengubah lebar */
+}
+
+
+#informasi .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Menambahkan jarak antara teks dan gambar */
+}
+
+#informasi .info-text {
+  flex-grow: 1; /* Agar teks memenuhi sisa ruang */
+}
+
+#informasi h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  border-bottom: 2px solid white; /* Garis bawah berwarna putih */
+  width: 15%; /* Panjang garis bawah */
+  display: inline-block; /* Mengatur agar lebar garis bawah sesuai dengan nilai width */
+}
+
+#informasi {
+  margin-bottom: 0; /* Hilangkan margin bawah */
+  padding-bottom: 0; /* Hilangkan padding bawah */
+}
+
+.kotak-merah {
+  margin-bottom: 0; /* Pastikan margin bawah dihilangkan */
+  padding-bottom: 0; /* Pastikan padding bawah dihilangkan */
+}
+
+
+#informasi h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: 20%;
+}
+
+#informasi ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  width: 70%;
+  text-align: justify;
+  font-size: 14px;
+}
+
+#informasi ul li {
+  margin-bottom: 10px;
+  margin-left: 30%;
+}
+
+
+.tulisan {
+  color: white;
+  font-size: 18px; /* Atur ukuran font sesuai kebutuhan */
+}
+
+.gambar {
+  width: 380px; /* Atur lebar gambar sesuai kebutuhan */
+  height: 511px; /* Menjaga rasio aspek gambar */
+  margin-right: 15%;
+  
+}
+
+/* Ubah warna tombol Selengkapnya menjadi merah */
+.btn-primary {
+  background-color: red;
+  border-color: red;
+}
+
+.btn-primary:hover {
+  background-color: darkred; /* Warna tombol saat hover */
+  border-color: darkred;
+}
+
+/* For Contact */
+
+.white-box {
+  background-color: #ffffff; /* Warna putih */
+  padding: 20px 0; /* Jarak vertikal atas dan bawah */
+  width: 100%; /* Lebar 100% */
+  height: 800px; /* Tinggi 600px */
+  position: relative; /* Agar .pink-box dapat diposisikan relatif terhadap .white-box */
+}
+
+.white-box .container {
+  padding: 60px; /* Jarak dalam kotak */
+  color: #bf1d1d;
+}
+
+.pink-box {
+  background-color: #edcfcf; /* Warna pink */
+  width: 377px; /* Lebar 377px */
+  height: 649px; /* Tinggi 649px */
+  border-radius: 10px; /* Border radius 10px */
+  position: absolute; /* Posisi absolute untuk mengatur lokasi dalam .white-box */
+  bottom: 20px; /* Jarak dari bawah .white-box */
+  left: 20px; /* Jarak dari kiri .white-box */
+  margin-left: 10%;
+  padding: 20px; /* Jarak dalam kotak */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Jarak antar item */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara ikon dan teks */
+  color: #000000; /* Warna teks hitam */
+  margin-top: 10px; /* Jarak atas dari elemen sebelumnya */
+  font-weight: bold;
+}
+
+
+.contact-icon {
+  font-size: 36px; /* Ukuran ikon 36x36px */
+  color: #ff0000; /* Warna merah untuk ikon */
+  margin-right: 15px;
+}
+
+.pink-box-image {
+  margin-top: 20%; /* Jarak atas gambar dari bagian atas kotak */
+  width: 237px; /* Lebar gambar 237px */
+  height: auto; /* Menjaga proporsi gambar */
+  align-self: center; /* Menyelaraskan gambar di tengah kotak secara horizontal */
+}
+
+
+.form-container {
+  width: 50%; /* Lebar formulir */
+  padding: 20px; /* Jarak dalam formulir */
+  margin-left: 50%;
+}
+
+.form-label {
+  font-weight: bold; /* Menebalkan label formulir */
+}
+
+.btn-danger {
+  margin-top: 90px;
+  background-color: #dc3545; /* Warna merah */
+  border-color: #dc3545; /* Border warna merah */
+}
+
+#pertanyaan {
+  height: 50%; /* Atur tinggi input email menjadi 80px */
+  padding: 10px; /* Tambahkan padding untuk memberi ruang di dalam input */
+  box-sizing: border-box; /* Pastikan padding tidak menambah tinggi total */
+}
+
+/* Selengkapnya */
+.custom-image {
+  width: 80%; /* Atur lebar gambar sesuai keinginan, misalnya 100% untuk lebar penuh */
+  max-width: 600px; /* Misalnya, membatasi lebar maksimal gambar */
+  height: auto; /* Memastikan rasio gambar tetap terjaga */
+  border-radius: 10px; /* Untuk sudut melengkung, bisa disesuaikan */
+}
+
+h2.mt-3.text-danger {
+  font-size: 24px; /* contoh ukuran font */
+  font-weight: bold; /* membuat teks lebih tebal */
+}
+
+.custom-paragraph {
+  width: 70%; /* Contoh lebar, bisa disesuaikan */
+  line-height: 1.6; /* Menambahkan jarak antar baris untuk kenyamanan baca */
+  text-align: justify; /* Mengatur teks menjadi rata kiri dan kanan */
+  margin-bottom: 20%;
+}
+
+.col-md-4 {
+  width: 30%;
+  text-align: justify;
+}
+
+h3.text-danger {
+  transform: translateX(-60px); /* Pindahkan elemen ke kiri dengan transform */
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.other-news {
+  transform: translateX(-60px); /* Pindahkan elemen ke kiri dengan transform */
+  width: 135%;
+  font-size: 11px;
+}
+
+.contact-info {
+  margin-top: 50px;
+  transform: translateX(-55px); /* Pindahkan elemen ke kiri dengan transform */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek shadow abu-abu */
+  border: 1px solid black; /* Garis pinggir 2px solid hitam */
+  border-radius: 20px;
+}
+
+
+.news-img {
+  width: 100px; /* Atur lebar gambar sesuai kebutuhan */
+  height: 70px; /* Atur tinggi gambar sesuai kebutuhan */
+}
+
+.contact-icon {
+  width: 32px; /* Atur lebar ikon */
+  height: 32px; /* Atur tinggi ikon */
+  vertical-align: middle; /* Agar ikon rata dengan teks */
+}
+
+.fab.fa-whatsapp {
+  color: #25D366; /* Warna hijau untuk ikon WhatsApp */
+}
+
+.other-news {
+  position: relative; /* Menentukan posisi relatif untuk pseudo-element */
+}
+
+.other-news::after {
+  content: ""; /* Menggunakan konten kosong untuk membuat garis */
+  display: block;
+  width: 70%; /* Lebar garis sama dengan lebar elemen .other-news */
+  height: 2px; /* Ketebalan garis, bisa disesuaikan */
+  background-color: #ccc; /* Warna garis abu-abu */
+  position: absolute;
+  bottom: -5px; /* Jarak dari bawah elemen .other-news, bisa disesuaikan */
+  left: 0;
+}
+
+
+
+
+.img-fluid {
+ 
+}
+
+.text-danger {
+  /* Gaya untuk teks dengan warna merah */
+}
+
+.other-news {
+  /* Gaya untuk berita lain */
+}
+
+.contact-info {
+  /* Gaya untuk informasi kontak */
+}
+
+/* Anda juga bisa menambahkan gaya khusus lainnya */
+
+
+
+
+
+
+/* Footer */
+footer {
+  background-color: #2b0000; /* Warna latar belakang footer */
+  padding: 20px 10%;
+  height: 207px;
+  color: #ffffff;
+  font-size: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Bagian kiri untuk link navigasi */
+/* Bagian kiri untuk link navigasi */
+.footer-links {
+  display: flex;
+  justify-content: space-between; /* Menyebarkan link dengan jarak yang sama */
+  gap: 60%; /* Jarak antar link */
+  order: 1;
+}
+
+.footer-links a {
+  max-width: 100px; /* Atur lebar maksimal */
+  white-space: nowrap;
+  /* Properti lain tetap seperti semula */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  flex: 1; /* Membuat link memiliki lebar yang sama */
+  text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+
+.footer-links a:hover {
+  color: #b3b3b3; /* Ubah warna teks saat di-hover */
+}
+
+/* Bagian tengah untuk teks terima kasih */
+.footer-text {
+  color: #ffffff;
+  font-size: 16px;
+  order: 2;
+  flex-basis: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Bagian kanan untuk ikon media sosial */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  order: 2;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #b3b3b3; /* Ubah warna ikon saat di-hover */
+}
+
+/* Penyesuaian tata letak untuk perangkat kecil */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer-links {
+    order: 1;
+  }
+  .social-icons {
+    order: 2;
+    margin-top: 10px;
+  }
+  .footer-text {
+    order: 3;
+    margin-top: 10px;
+  }
+}
+
+/* sosial icon */
+.social-icons a img {
+  width: 30px; /* Sesuaikan ukuran gambar */
+  height: 30px; /* Sesuaikan ukuran gambar */
+  
+}

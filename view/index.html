@@ -1,103 +1,300 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
 
-    <title>Unit Transfusi Darah Kab.Lombok Tengah</title>
-  </head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="../images/utd.png" alt="Logo">
+      <div class="brand-text">
+        <div class="utd-text">UTD</div>
+        <div class="unit-text">Unit Transfusi Darah</div>
+      </div>
+    </a>
+    <!-- Tambahkan menu di sini -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tentang">Tentang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#berita">Berita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#informasi">Informasi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#jadwal">jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <body>
-    <!-- Navbar -->
-    <div class="navbar-container">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid px-3">
-          <a class="navbar-brand" href="#">
-            <img src="../images/utd.png" alt="Unit Transfusi Darah Logo" width="37" height="57" class="me-2">
-            <div class="brand-text">
-              <span style="color: #903232; font-weight: bold;">UTD</span>
-              <span class="small-text">Unit Transfusi Darah</span>
-            </div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Tentang</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Berita</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Informasi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Jadwal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
+<!-- banner -->
+<div class="container-fluid banner">
+  <div class="container text-left" style="padding-left: 0;">
+    <h4 class="display-6" id="home">Donate blood save lives!</h4>
+    <h3 class="display-1">Aksi Donor <span class="highlight-text">Darah</span></h3>
+    <a href="#stok_darah">
+      <button type="button" class="btn btn-danger btn-lg">
+        Mulai Menjelajah
+      </button>
+    </a>
+  </div>
+</div>
+
+
+  <!-- Stok Darah UTD -->
+  <div class="container-fluid layanan pt-5 pb-5">
+    <div class="container text-center">
+      <button id="stok_darah" class="btn btn-danger btn-lg">Stok Darah UTD</button>
+
+      <div class="row pt-4"
+        style=" justify-content: space-between; background-color: pink; padding: 10px; margin-top: 40px;">
+        <div class="col-md-2 text-center">
+          <span class="lingkaran" style="background: none;">
+            <img src="../images/gol A.png" alt="Golongan Darah A" style="width: 135px; height: 180px;">
+          </span>
+          <h3 class="mt-0" style="margin-top: 0;">100 <br>Kantong</h3>
+        </div>
+        <div class="col-md-2 text-center">
+          <span class="lingkaran" style="background: none;">
+            <img src="../images/gol B.png" alt="Golongan Darah B" style="width: 135px; height: 180px;">
+          </span>
+          <h3 class="mt-0" style="margin-top: 0;">200 <br>Kantong</h3>
+        </div>
+        <div class="col-md-2 text-center">
+          <span class="lingkaran" style="background: none;">
+            <img src="../images/gol AB.png" alt="Golongan Darah AB" style="width: 135px; height: 180px;">
+          </span>
+          <h3 class="mt-0" style="margin-top: 0;">57 <br>Kantong</h3>
+        </div>
+        <div class="col-md-2 text-center">
+          <span class="lingkaran" style="background: none;">
+            <img src="../images/goll_o.png" alt="Golongan Darah O" style="width: 135px; height: 180px;">
+          </span>
+          <h3 class="mt-0" style="margin-top: 0;">70 <br>Kantong</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tentang -->
+  <div class="container-fluid pt-5 pb-5 bg-light">
+    <div class="container text-left">
+      <div class="row align-items-center">
+        <!-- Kolom teks -->
+        <div class="col-md-6">
+          <h2 class="display-3" id="tentang">Tentang Kami</h2>
+          <p>
+          <h1 style="color: red; font-size: 36px; text-align: left; width: 100%; ">Unit Transfusi Darah, Lombok Tengah
+          </h1>
+          </p>
+          <p> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece<br>
+            of classical Latin literature from 45 BC, making it over 2000 years old. Richard Mc Clintock,<br>
+            a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more <br>
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the <br>
+            cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+            written in 45 BC. This book is a treatise on the
+            <br>
+            theory of ethics, very popular during the <br>
+            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+            1.10.32.
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from <br>
+            "de Finibus Bonorum et Malorum" by Cicero are also reproduced <br>
+            in their exact original form, accompanied by English versions from <br>
+            the 1914 translation by H. Rackham.
+          </p>
+          <br>
+          <p>
+            <h1 style="color: red; font-size: 36px; text-align: left; width: 100%;">Manfaat</h1>
+            <ul>
+                <li>Darah yang didonorkan dapat menyelamatkan hingga tiga nyawa. Ini sangat penting bagi pasien yang membutuhkan transfusi darah akibat kecelakaan, operasi, atau penyakit tertentu seperti anemia dan kanker.</li>
+                <li>Transfusi darah dapat membantu pasien dengan kondisi kronis atau penyakit serius untuk menjalani kehidupan yang lebih baik dengan meningkatkan kadar hemoglobin dan oksigen dalam tubuh mereka.</li>
             </ul>
+            
+        </div>
+        <!-- Kolom gambar -->
+        <div class="col-md-6">
+          <img src="../images/kartun_donor.jpg" alt="Tentang Kami" class="img-fluid rounded custom-margin-top">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ <!-- Berita -->
+<div class="container-fluid pt-5 pb-5">
+  <div class="container">
+    <h2 class="display-3 text-center" id="berita">Berita UTD - Seputar Donor Darah</h2>
+    <div class="row align-items-center mt-4">
+      <div class="col-md-6">
+        <img src="../images/donor.jpg" alt="Donor Darah" class="img-fluid rounded" />
+      </div>
+      <div class="col-md-6">
+        <h1 class="text-danger">- Antusiasme Warga Ikuti Kegiatan Donor Darah Ramadan</h1>
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </p>
+        <a href="berita.html" class="btn btn-danger">Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- terupdate -->
+<div class="container-fluid pt-5 pb-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <h2 class="display-6 text-left" id="berita">Ter-update</h2>
+      </div>
+    </div>
+    <div class="row pt-4 gx-4 gy-4">
+      <div class="col-md-4">
+        <div class="card crop-img">
+          <img src="../images/donor.jpg" class="card-img-top" alt="Sample Image" />
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Antusiasme Warga Ikuti Kegiatan Donor Darah Ramadan</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Deleniti, dolorum quasi? Neque consectetur odio placeat inventore.
+            </p>
+            <a href="berita.html" class="btn btn-primary">Selengkapnya →</a>
           </div>
         </div>
-      </nav>
-    </div>
-
-    <!-- Background Image Section -->
-    <div class="background-section">
-      <div class="text-section">
-        <h2>Donate blood save lives!</h2>
-        <h1>
-          Aksi Donor<span class="highlight"> Darah</span> 
-        </h1>
-        <p>
-          Bergabunglah dengan gerakan kami dan bantu mereka yang <br> membutuhkan. Setetes darah Anda bisa menjadi harapan baru bagi <br> banyak orang. Donor Darah.
-        </p>
-        <div class="d-flex gap-3 mt-2 mt-lg-4">
-          <a href="belajar.html" class="btn bg-red rounded-3 px-4 shadow">Mulai Menjelajah</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Stok Darah UTD Section -->
-<div class="container my-5">
-  <h4 class="bg-red">Stok Darah UTD</h4>
-  <div class="row justify-content-center">
-    <div class="col-md-3 text-center p-3">
-      <div class="blood-type">
-        <img src="../images/gol A.png" alt="Golongan Darah A">
-        <h5>100 Kantong</h5>
-      </div>
-      <div class="blood-type">
-        <img src="../images/gol AB.png" alt="Golongan Darah B">
-        <h5>200 Kantong</h5>
-      </div>
-      <div class="blood-type">
-        <img src="../images/gol B.png" alt="Golongan Darah O">
-        <h5>57 Kantong</h5>
-      </div>
-      <div class="blood-type">
-        <img src="../images/gol B.png" alt="Golongan Darah AB">
-        <h5>57 Kantong</h5>
       </div>
       
+      <div class="col-md-4">
+        <div class="card crop-img">
+          <img src="../images/donor.jpg" class="card-img-top" alt="Sample Image" />
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Antusiasme Warga Ikuti Kegiatan Donor Darah Ramadan</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Deleniti, dolorum quasi? Neque consectetur odio placeat inventore.
+            </p>
+            <a href="berita.html" class="btn btn-primary">Selengkapnya →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card crop-img">
+          <img src="../images/donor.jpg" class="card-img-top" alt="Sample Image" />
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Antusiasme Warga Ikuti Kegiatan Donor Darah Ramadan</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Deleniti, dolorum quasi? Neque consectetur odio placeat inventore.
+            </p>
+            <a href="berita.html" class="btn btn-primary mt-auto">Selengkapnya →</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <a href="berita.html" class="btn btn-outline-danger">More →</a>
       </div>
     </div>
   </div>
 </div>
 
+ <!-- Logo Partners -->
+<div class="container-fluid pt-5 pb-5 bg-light">
+  <div class="container text-center">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-4">
+        <img src="../images/utd.png" alt="Logo 1" class="img-fluid" style="max-width: 150px;">
+      </div>
+      <div class="col-md-4">
+        <img src="../images/loteng.png" alt="Logo 2" class="img-fluid" style="max-width: 150px;">
+      </div>
+      <div class="col-md-4">
+        <img src="../images/dikes.png" alt="Logo 3" class="img-fluid" style="max-width: 150px;">
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+<!-- informasi UTD -->
+<div class="kotak-merah" id="informasi">
+  <div class="tulisan">
+    <h1>Informasi UTD</h1>
+    <h3>Syarat-Syarat Donor Darah</h3>
+    <ul>
+      <li>Usia minimal 17 tahun dan maksimal 65 tahun. Pendonor di bawah 17 tahun harus mendapatkan izin tertulis dari orang tua atau wali.</li>
+      <li>Berat badan minimal 45 kg.</li>
+      <li>Sehat jasmani dan rohani. Tidak sedang menderita penyakit berat atau menular.</li>
+      <li>Tekanan darah sistolik (atas) antara 110 - 160 mmHg dan diastolik (bawah) antara 70 - 100 mmHg.</li>
+      <li>Kadar hemoglobin minimal 12,5 g/dL untuk wanita dan 13,0 g/dL untuk pria.</li>
+      <li>Interval donor darah minimal 12 minggu atau 3 bulan dari donor darah sebelumnya (maksimal 4 kali dalam setahun).</li>
+      <li>Tidak sedang menderita penyakit seperti HIV/AIDS, hepatitis B atau C, sifilis, dan penyakit menular lainnya.</li>
+      <li>Tidak sedang mengonsumsi obat-obatan tertentu yang dapat mempengaruhi kualitas darah atau membahayakan penerima darah (misalnya, antibiotik atau antikoagulan).</li>
+      <li>Tidak memiliki kebiasaan menyalahgunakan narkoba atau alkohol.</li>
+      <li>Tidak melakukan tindik atau tato dalam 6 bulan terakhir.</li>
+      <li>Tidak sedang hamil atau menyusui.</li>
+      <li>Tidak sedang mengalami menstruasi berat atau nyeri saat menstruasi.</li>
+    </ul>
+  </div>
+  <img src="../images/jadwal.jpg" alt="Gambar" class="gambar" id="jadwal">
+</div>
+
+
+<!-- footer -->
+<footer>
+  <div class="footer-links">
+    <a href="">Profile</a>
+    <span>|</span>
+    <a href="">Terms and use</a>
+    <span>|</span>
+    <a href="">Advertising</a>
+  </div>
+  <div class="social-icons">
+    <a href="#"><img src="../images/ig.png" alt="Description" /></a>
+    <a href="#"><img src="../images/ff.png" alt="Description" /></a>
+    <a href="#"><img src="../images/logo x.png" alt="Description" /></a>
+    
+  </div>
+  <div class="footer-text">
+    Terima kasih telah menjadi pahlawan bagi banyak orang. Setiap tetes darah yang Anda donorkan sangat berarti dan <br> mampu menyelamatkan nyawa. Bersama kita bisa membuat dunia lebih baik.
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</body>
+
 </html>
+
